@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Navbar />
-
+    <Shopping />
     <Product
       v-for="product  in  products"
       :key="product.id"
@@ -10,12 +10,14 @@
       :image="product.image"
       :price="product.price"
     />
+
     <!-- <router-view /> -->
   </div>
 </template>
 <script>
 import Navbar from "./components/Navbar.vue";
 import Product from "./views/Product.vue";
+import Shopping from "./components/Shopping.vue";
 export default {
   name: "app",
   computed: {
@@ -25,7 +27,8 @@ export default {
   },
   components: {
     Navbar,
-    Product
+    Product,
+    Shopping
   }
 };
 </script>
