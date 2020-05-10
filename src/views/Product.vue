@@ -14,7 +14,7 @@
           <span>{{ "$" + price }}</span>
         </md-card-content>
         <!-- <md-card-actions> -->
-        <md-button class="md-primary" @click="addToCart(id)">Add to Cart</md-button>
+        <md-button class="md-primary" @click="addItem(id)">Add to Cart</md-button>
         <!-- </md-card-actions> -->
       </md-card>
     </div>
@@ -32,7 +32,7 @@
           <span>{{ "$" + price }}</span>
         </md-card-content>
         <!-- <md-card-actions> -->
-        <md-button class="md-primary" @click="addToCart(id)">Add to Cart</md-button>
+        <md-button class="md-primary" @click="addItem(id)">Add to Cart</md-button>
         <!-- </md-card-actions> -->
       </md-card>
     </div>
@@ -50,7 +50,7 @@
           <span>{{ "$" + price }}</span>
         </md-card-content>
         <!-- <md-card-actions> -->
-        <md-button class="md-primary" @click="addToCart(id)">Add to Cart</md-button>
+        <md-button class="md-primary" @click="addItem(id)">Add to Cart</md-button>
         <!-- </md-card-actions> -->
       </md-card>
     </div>
@@ -60,10 +60,10 @@
 <script>
 export default {
   name: "product",
-  props: ["id", "name", "image", "price"],
+  props: ["name", "id", "image", "price"],
   methods: {
-    addToCart(id) {
-      this.$store.dispatch("addToCart", id);
+    addItem(id) {
+      this.$store.dispatch("addItem", id);
     }
   }
 };

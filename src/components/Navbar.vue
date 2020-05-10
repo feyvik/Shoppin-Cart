@@ -2,7 +2,7 @@
   <div class="page-container">
     <md-app>
       <md-app-toolbar class="md-primary">
-        <span class="md-title">Shopping Cart</span>
+        <h3 class="md-title">Shopping Cart</h3>
       </md-app-toolbar>
     </md-app>
   </div>
@@ -11,7 +11,7 @@
 .md-app {
   max-height: 50vh;
   border: 1px solid rgba(rgb(0, 0, 0), 0.12);
-  background: linear-gradient(-90deg, #84cf6a, #16c0b0);
+  background: linear-gradient(-90deg, #6a79cf, #1627c0);
   color: #ffffff;
 }
 </style>

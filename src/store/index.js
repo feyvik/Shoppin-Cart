@@ -8,79 +8,60 @@ export default new Vuex.Store({
     products: [
       {
         id: 1,
-        name: "Green Sock",
+        name: "Samsung Galaxy A8 Spy Phone",
         image:
-          "https://www.vuemastery.com/images/challenges/vmSocks-green-onWhite.jpg",
+          "https://www.mobilitaria.com/wp-content/uploads/2019/10/Samsung-Galaxy-A8-Spy-Phone.jpg",
         price: 340,
       },
 
       {
         id: 2,
-        name: "Blue Sock",
+        name: "Asus Rog Phone",
         image:
-          "https://www.vuemastery.com/images/challenges/vmSocks-blue-onWhite.jpg",
+          "https://i.gadgets360cdn.com/products/large/1543479620_635_asus_rog_phone_db.jpg",
         price: 500,
       },
 
       {
         id: 3,
-        name: "Sully and Boo",
+        name: "Cat Phone",
         image:
-          "https://www.stance.com/dw/image/v2/BBBN_PRD/on/demandware.static/-/Sites-masterCatalog_Stance/default/dw7b3e42d7/prod_images/A546A20SUL_PUL.jpg?sw=2000&sh=2000&sm=fit",
+          "https://www.catphones.com/wp-content/uploads/2018/08/cat-s41-front.png",
         price: 600,
       },
 
       {
         id: 4,
-        name: "Black Sock",
+        name: "Trainer Socks Black",
         image:
           "https://schoolkits.ng/wp-content/uploads/2019/08/Trainer-Socks-Black.jpg",
         price: 700,
       },
-
-      {
-        id: 5,
-        name: "Roco",
-        image:
-          "https://cdn.pixabay.com/photo/2016/06/25/14/39/baseball-cap-1479012__340.png",
-        price: 720,
-      },
-
-      {
-        id: 6,
-        name: "Red Sock",
-        image:
-          "https://dictionary.cambridge.org/images/thumb/sock_noun_001_15890.jpg",
-        price: 750,
-      },
     ],
 
-    inCart: [],
+    StoreCart: [],
   },
   getters: {
-    products: (state) => {
-      return state.products;
-    },
-
-    inCart: (state) => state.inCart,
+    products: (state) => state.products,
+    StoreCart: (state) => state.StoreCart,
   },
 
   mutations: {
-    ADD_TO_CART(state, id) {
-      state.inCart.push(id);
+    ADD_Item(state, id) {
+      state.StoreCart.push(id);
     },
 
-    REMOVE_FROM_CART(state, index) {
-      state.inCart.splice(index, 1);
+    REMOVE_Item(state, index) {
+      state.StoreCart.splice(index, 1);
     },
   },
   actions: {
-    addToCart(context, id) {
-      context.commit("ADD_TO_CART", id);
+    addItem(context, id) {
+      context.commit("ADD_Item", id);
     },
 
-    removeFromCart(context, index) {
-      context.commit("REMOVE_FROM_CART", index);
+    removeItem(context, index) {
+      context.commit("REMOVE_Item", index);
     },
   },
   modules: {},
